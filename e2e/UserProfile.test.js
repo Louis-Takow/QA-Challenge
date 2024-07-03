@@ -7,7 +7,7 @@ test('Fill all the fields on the page with VALID requirements', async({page}) =>
    const User = new ProfilePage(page); 
    await User.gotoUserProfileCreatePage();//open profile creation URL
    await User.enterFirstName('John');
-   await User.enterLasttName('Takow');
+   await User.enterLasttName('Doe');
    await User.enterEmail('test@123');
    await User.enterPassword('Password@123');
    await User.enterConfirmPassword('Password@123');
@@ -25,7 +25,7 @@ test('Fill ONLY mandatory the fields on the page with correct requirements', asy
    const User = new ProfilePage(page); 
    await User.gotoUserProfileCreatePage();//open profile creation URL
    await User.enterFirstName('John');
-   await User.enterLasttName('Takow');
+   await User.enterLasttName('Doe');
    await User.enterEmail('test@123');
    await User.enterPassword('Password@123');
    await User.enterConfirmPassword('Password@123');
@@ -54,7 +54,7 @@ test('Fill all fields EXCEPT "First Name" field', async({page}) => {
    //create user profile
    const User = new ProfilePage(page); 
    await User.gotoUserProfileCreatePage();//open profile creation URL
-   await User.enterLasttName('Takow');
+   await User.enterLasttName('Doe');
    await User.enterEmail('test@123');
    await User.enterPassword('Password@123');
    await User.enterConfirmPassword('Password@123');
@@ -86,7 +86,7 @@ test('Fill all fields EXCEPT "Last Name" field', async({page}) => {
     //create user profile
     const User = new ProfilePage(page); 
     await User.gotoUserProfileCreatePage();//open profile creation URL
-    await User.enterFirstName('Louis');
+    await User.enterFirstName('John');
     await User.enterEmail('test@123');
     await User.enterPassword('Password@123');
     await User.enterConfirmPassword('Password@123');
