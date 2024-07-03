@@ -3,11 +3,13 @@ CONFIGURATION 0R ENVIRONMENT SETUP INSTRUCTIONS
 - Clone repository;
    .Copy URL
    .Open cmd 0r Git Bash of a new folder
-   .Run command "Git clone <copied http link>" on terminal
+   .Run command "Git clone <copied http link>" on cmd terminal
 - Open cloned repo using VISUAL STUDIO CODE.
-- Download PLAYWRIGHT by Microsoft plugin.
-- Press Cntrl + Shift + P; To open Command palette, then enter “Install Playwright” and click “OK” to install PLAYWRIGHT framework, Chromium, Firefox and WebKit browsers.
+- Install PLAYWRIGHT with command "npm init playwright@latest" on new terminal 
+i. Select TypeScript language
+ii. Put end-2-end test in "e2e" folder
+iii. Install all PLAYWRIGHT BROWSERS
+- Go to "Extenstions" tab in VS Code, search and install PLAYWRIGHT by Microsoft extension.
 - Open Git bash terminal
-- Run source code with command "npx playwright test"
-- End to End test will run automatically and a Web page will be displayed at the end of test to provide clear and meaningful TEST REPORTS, including details of passed and failed test
-cases. 
+- Run source code with command "npx playwright test" in terminal-- End to End test will run 
+- To provide clear and meaningful TEST REPORTS after test - In terminal, run command; "npx playwright show-report". 
