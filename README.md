@@ -1,9 +1,9 @@
 CONFIGURATION 0R ENVIRONMENT SETUP INSTRUCTIONS
 1. Open link to Git repository.
 2. Clone repository;
-   .Copy URL
-   .Open cmd 0r Git Bash of a new folder
-   .Run command "Git clone <copied http link>" on cmd terminal
+   - Copy URL
+   - Open cmd 0r Git Bash of a new folder
+   - Run command "Git clone <copied http link>" on cmd terminal
 3. Open cloned repo using VISUAL STUDIO CODE.
 4. Install PLAYWRIGHT with command "npm init playwright@latest" on new terminal 
 - Select TypeScript language
