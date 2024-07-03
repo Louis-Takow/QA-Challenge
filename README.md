@@ -1,6 +1,6 @@
 CONFIGURATION 0R ENVIRONMENT SETUP INSTRUCTIONS
-- Open link to Git repository.
-- Clone repository;
+1. Open link to Git repository.
+2. Clone repository;
    .Copy URL
    .Open cmd 0r Git Bash of a new folder
    .Run command "Git clone <copied http link>" on cmd terminal
