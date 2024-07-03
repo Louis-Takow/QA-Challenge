@@ -1,30 +1,65 @@
-exports.POM = class POM {
+exports.ProfilePage = class ProfilePage {
 
     // All Elements Attributes are stored in constructor to locate them
     constructor(page) {
         this.page = page;
         
     }
-    //Methods; for action on Elements
+    //variables
     async gotoUserProfileCreatePage(){
         await this.page.goto('https://qa-assessment.pages.dev/');
     }
     
-    async enterFields(firstName,lastName,email,password, confirmPassword, dateofBirth,phoneNumber,address,linkInURL,gitHubURL){
+    async enterFirstName(firstName){
         await this.page.locator('#firstName').fill(firstName);
-        await this.page.locator('#lastName').fill(lastName);
-        await this.page.locator('#email').fill(email);
-        await this.page.locator('#password').fill(password);
-        await this.page.locator('#confirmPassword').fill(confirmPassword);
-        await this.page.locator('#male').click();
-        await this.page.locator('#dob').type(dateofBirth);
-        await this.page.locator('#phone').fill(phoneNumber); 
-        await this.page.locator('#address').fill(address);
-        await this.page.locator('#linkedIn').fill(linkInURL);
-        await this.page.locator('#github').fill(gitHubURL);
-        await this.page.locator("input[type='submit']").click();
         
     }
-    
-    
+   
+    async enterLasttName(lastName){
+        await this.page.locator('#lastName').fill(lastName);
+        
+    }
+    async enterEmail(email){
+        await this.page.locator('#email').fill(email);
+        
+    }
+    async enterPassword(password){
+        await this.page.locator('#password').fill(password);
+        
+    }
+    async enterConfirmPassword(confirmPassword){
+        await this.page.locator('#confirmPassword').fill(confirmPassword);
+    }
+
+    async selectGender(gender){
+        await this.page.locator('#'+ gender).click();
+    }
+
+    async enterDateofBirth(dateofBirth){
+        await this.page.locator('#dob').type(dateofBirth);
+    }
+
+    async enterPhoneNumber(phoneNumber){
+        await this.page.locator('#phone').fill(phoneNumber); 
+    }
+
+    async enteraddress(address){
+        await this.page.locator('#address').fill(address);
+    }
+
+    async enterLinkinURL(linkInURL){
+        await this.page.locator('#linkedIn').fill(linkInURL);
+    }
+
+    async enterLinkinURL(linkInURL){
+        await this.page.locator('#linkedIn').fill(linkInURL);
+    }
+
+    async enterGithubURL(gitHubURL){
+        await this.page.locator('#github').fill(gitHubURL);
+    }
+   
+    async clickSubmitButton(){
+        await this.page.locator("input[type='submit']").click();
+    }
     }
