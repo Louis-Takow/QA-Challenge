@@ -8,7 +8,7 @@ test('create profile when ALL fields are filled with VALID requirements - Postiv
    await User.gotoUserProfileCreatePage();//open profile creation URL
    await User.enterFirstName('John');
    await User.enterLasttName('Doe');
-   await User.enterEmail('test@123');
+   await User.enterEmail('test@gmail.com');
    await User.enterPassword('Password@123');
    await User.enterConfirmPassword('Password@123');
    await User.selectGender('male');
@@ -26,7 +26,7 @@ test('Create profile when all mandatory fields are filled with VALID requirement
    await User.gotoUserProfileCreatePage();//open profile creation URL
    await User.enterFirstName('John');
    await User.enterLasttName('Doe');
-   await User.enterEmail('test@123');
+   await User.enterEmail('test@gmail.com');
    await User.enterPassword('Password@123');
    await User.enterConfirmPassword('Password@123');
    await User.selectGender('male');
@@ -55,7 +55,7 @@ test('Create profile when user fills all fields EXCEPT "First Name" field - Nege
    const User = new ProfilePage(page); 
    await User.gotoUserProfileCreatePage();//open profile creation URL
    await User.enterLasttName('Doe');
-   await User.enterEmail('test@123');
+   await User.enterEmail('test@gmail.com');
    await User.enterPassword('Password@123');
    await User.enterConfirmPassword('Password@123');
    await User.selectGender('male');
@@ -87,7 +87,7 @@ test('Create profile when user fills all fields except "Last Name" field - Neget
     const User = new ProfilePage(page); 
     await User.gotoUserProfileCreatePage();//open profile creation URL
     await User.enterFirstName('John');
-    await User.enterEmail('test@123');
+    await User.enterEmail('test@gmail.com');
     await User.enterPassword('Password@123');
     await User.enterConfirmPassword('Password@123');
     await User.selectGender('male');
@@ -119,7 +119,7 @@ test('Create profile when user fills all fields EXCEPT "Password" field - Negeti
    await User.gotoUserProfileCreatePage();//open profile creation URL
    await User.enterFirstName('John');
    await User.enterLasttName('Doe');
-   await User.enterEmail('test@123');
+   await User.enterEmail('test@gmail.com');
    await User.enterConfirmPassword('Password@123');
    await User.selectGender('male');
    await User.enterDateofBirth('13081900');
@@ -139,7 +139,7 @@ test('Create profile when user fills all fields EXCEPT "Confirm Password" field 
    await User.gotoUserProfileCreatePage();//open profile creation URL
    await User.enterFirstName('John');
    await User.enterLasttName('Doe');
-   await User.enterEmail('test@123');
+   await User.enterEmail('test@gmail.com');
    await User.enterPassword('Password@123');
    await User.selectGender('male');
    await User.enterDateofBirth('13081900');
@@ -159,7 +159,7 @@ test('Create profile when user fills different values for "Password" and "Confir
    await User.gotoUserProfileCreatePage();//open profile creation URL
    await User.enterFirstName('John');
    await User.enterLasttName('Doe');
-   await User.enterEmail('test@123');
+   await User.enterEmail('test@gmail.com');
    await User.enterPassword('Password@123');
    await User.enterConfirmPassword('Password@456');
    await User.selectGender('male');
