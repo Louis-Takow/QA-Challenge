@@ -5,7 +5,7 @@ import { ProfilePage } from "./PageObjectModel/ProfilePage";
 test('create profile when ALL fields are filled with VALID requirements - Postivie Test', async({page}) => {
    //create user profile
    const User = new ProfilePage(page); 
-   await page.goto('/');//open profile creation URL
+   await User.gotoUserProfileCreatePage();//open profile creation URL
    await User.enterFirstName('John');
    await User.enterLasttName('Doe');
    await User.enterEmail('test@123');
