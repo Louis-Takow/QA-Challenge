@@ -2,10 +2,10 @@ const { test } = require("@playwright/test");
 import { ProfilePage } from "./PageObjectModel/ProfilePage";
 
 
-test('Fill all the fields on the page with VALID requirements', async({page}) => {
+test('create profile when ALL fields are filled with VALID requirements - Postivie Test', async({page}) => {
    //create user profile
    const User = new ProfilePage(page); 
-   await User.gotoUserProfileCreatePage();//open profile creation URL
+   await page.goto('/');//open profile creation URL
    await User.enterFirstName('John');
    await User.enterLasttName('Doe');
    await User.enterEmail('test@123');
@@ -21,7 +21,7 @@ test('Fill all the fields on the page with VALID requirements', async({page}) =>
 
 });
 
-test('Fill ONLY mandatory the fields on the page with correct requirements', async({page}) => {
+test('Create profile when all mandatory fields are filled with VALID requirements - Postivie Test', async({page}) => {
    const User = new ProfilePage(page); 
    await User.gotoUserProfileCreatePage();//open profile creation URL
    await User.enterFirstName('John');
@@ -38,7 +38,7 @@ test('Fill ONLY mandatory the fields on the page with correct requirements', asy
 
 });
 
-test('Enter alphanumeric characters and/or symbols in "First Name" field', async({page}) => {
+test('Create profile with alphanumeric characters and/or symbols in "First Name" field - Negetive Test', async({page}) => {
    const User = new ProfilePage(page); 
    await User.gotoUserProfileCreatePage();//open profile creation URL
    await User.enterFirstName('@#$John123');//Enter alphanumeric and/specials characters
@@ -50,7 +50,7 @@ test('Enter alphanumeric characters and/or symbols in "First Name" field', async
    
 });
 
-test('Fill all fields EXCEPT "First Name" field', async({page}) => {
+test('Create profile when user fills all fields EXCEPT "First Name" field - Negetive Test', async({page}) => {
    //create user profile
    const User = new ProfilePage(page); 
    await User.gotoUserProfileCreatePage();//open profile creation URL
@@ -71,7 +71,7 @@ test('Fill all fields EXCEPT "First Name" field', async({page}) => {
    })
 });
 
-test('Enter alphanumeric characters and/or symbols in "Last Name" field', async({page}) => {
+test('Create profile with alphanumeric characters and/or symbols in "Last Name" field - Negetive Test', async({page}) => {
    const User = new ProfilePage(page); 
    await User.gotoUserProfileCreatePage();//open profile creation URL
    await User.enterLasttName('@#$Deo123');//Enter alphanumeric and/specials characters
@@ -82,7 +82,7 @@ test('Enter alphanumeric characters and/or symbols in "Last Name" field', async(
    })
 });
 
-test('Fill all fields EXCEPT "Last Name" field', async({page}) => {
+test('Create profile when user fills all fields except "Last Name" field - Negetive Test', async({page}) => {
     //create user profile
     const User = new ProfilePage(page); 
     await User.gotoUserProfileCreatePage();//open profile creation URL
@@ -103,7 +103,7 @@ test('Fill all fields EXCEPT "Last Name" field', async({page}) => {
     })
 });
 
-test('Enter invalid email address', async({page}) => {
+test('Create profile with INVALID email address - Negetive Test', async({page}) => {
    const User = new ProfilePage(page); 
    await User.gotoUserProfileCreatePage();//open profile creation URL
    await User.enterFirstName('Test123@G');//Enter INVALID email
@@ -114,7 +114,7 @@ test('Enter invalid email address', async({page}) => {
    })
 });
 
-test('Fill all fields EXCEPT "Password" field', async({page}) => {
+test('Create profile when user fills all fields EXCEPT "Password" field - Negetive Test', async({page}) => {
    const User = new ProfilePage(page); 
    await User.gotoUserProfileCreatePage();//open profile creation URL
    await User.enterFirstName('John');
@@ -134,7 +134,7 @@ test('Fill all fields EXCEPT "Password" field', async({page}) => {
    })
 });
 
-test('Fill all fields EXCEPT "Confirm Password" field', async({page}) => {
+test('Create profile when user fills all fields EXCEPT "Confirm Password" field - Negetive Test', async({page}) => {
    const User = new ProfilePage(page); 
    await User.gotoUserProfileCreatePage();//open profile creation URL
    await User.enterFirstName('John');
@@ -154,7 +154,7 @@ test('Fill all fields EXCEPT "Confirm Password" field', async({page}) => {
    })
 });
 
-test('Enter different values for "Password" and "Confirm Password" Fields', async({page}) => {
+test('Create profile when user fills different values for "Password" and "Confirm Password" Fields -Negetive Test', async({page}) => {
    const User = new ProfilePage(page); 
    await User.gotoUserProfileCreatePage();//open profile creation URL
    await User.enterFirstName('John');

@@ -1,4 +1,11 @@
 import { defineConfig, devices } from '@playwright/test';
+import {OrtoniReportConfig} from "ortoni-report";
+   const reportConfig: OrtoniReportConfig = {
+        projectName: "Ortoni",
+        testType: "Regression",
+        authorName: "Koushik",
+        preferredTheme: "light"
+   };
 
 /**
  * Read environment variables from file.
@@ -11,6 +18,9 @@ import { defineConfig, devices } from '@playwright/test';
  * See https://playwright.dev/docs/test-configuration.
  */
 export default defineConfig({
+  reporter: [["ortoni-report", reportConfig],
+             ["dot"]],
+  // Other Playwright configurations
   testDir: './e2e',
   /* Run tests in files in parallel */
   fullyParallel: true,
@@ -21,11 +31,11 @@ export default defineConfig({
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: 'html',
+  //reporter: 'html',
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('/')`. */
-    // baseURL: 'http://127.0.0.1:3000',
+    baseURL: 'https://qa-assessment.pages.dev',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',

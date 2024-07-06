@@ -10,5 +10,8 @@
   "devDependencies": {
     "@playwright/test": "^1.45.1",
     "@types/node": "^20.11.17"
+  },
+  "dependencies": {
+    "ortoni-report": "^1.1.5"
   }
 }

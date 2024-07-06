@@ -7,7 +7,7 @@ exports.ProfilePage = class ProfilePage {
     }
     //variables
     async gotoUserProfileCreatePage(){
-        await this.page.goto('https://qa-assessment.pages.dev/');
+        await this.page.goto('/');
     }
     
     async enterFirstName(firstName){
